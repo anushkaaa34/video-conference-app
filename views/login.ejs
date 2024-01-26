@@ -1,0 +1,112 @@
+<!-- login.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .container label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .container input[type="text"],
+      .container input[type="password"],
+      .container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+      }
+
+      .container input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .container input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .container .register-link {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .container .register-link a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      .container .room-section {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+      }
+
+      .container .room-section h3 {
+        margin-bottom: 10px;
+      }
+
+      .container .room-section button,
+      .container .room-section input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+      }
+
+      .container .room-section label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form action="/login" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+        <input type="submit" value="Login" />
+      </form>
+      <div class="register-link">
+        <a href="/register">New user? Register here</a>
+      </div>
+      <div class="room-section">
+        <h3>Create or Join a Room</h3>
+        <button id="createRoomBtn" type="button">Create New Room</button>
+        <div>
+          <label for="roomInput">Room ID:</label>
+          <input id="roomInput" type="text" placeholder="Enter Room ID" />
+          <button id="joinRoomBtn" type="button">Join Existing Room</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
